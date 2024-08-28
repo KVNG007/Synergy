@@ -1,13 +1,12 @@
-import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import React from 'react'
 import { Logo } from './Icons'
-import { ArrowButton } from "./Buttons"
+import { ArrowButton } from './Buttons'
 
-const Navbar = () => {
+const Footer = () => {
   return (
-    <nav className='fixed z-50 w-full top-4 left-[50%] -translate-x-[50%] bg-transparent text-sm  px-4'>
-      <div className=" flex flex-row items-center justify-between bg-white p-3 shadow-sm rounded-xl border-2 border-gray-100">
+    <footer className='relative z-40 bg-gray-100 text-sm p-4 '>
+      <div className=" h-[30dvh] flex flex-row items-center justify-between bg-white p-3 shadow-sm rounded-xl border-2 border-gray-100">
         <Link href={`#`} className=''>
           <Logo className='scale-75' width={'200'} height={50}/>
         </Link>
@@ -32,8 +31,8 @@ const Navbar = () => {
 
       </div>
 
-    </nav>
+    </footer>
   )
 }
 
-export default Navbar
+export default Footer

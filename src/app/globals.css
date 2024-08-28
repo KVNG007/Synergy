@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,10 +26,76 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    overflow-x: hidden;
+}
+
+*, *::after, *::after {
+  box-sizing: border-box !important;
+}
+
+
+.font-Vietnam-light {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-Vietnam-regular {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-Vietnam-medium {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-Vietnam-semibold {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-Vietnam-bold {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-Vietnam-black {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+#tsparticles {
+  background-color: blue;
+  height:100%;
+  scale: 0.975;
+  border-radius: 3em !important;
+}
+
+.cybord-bg {
+  background-position: 80% 80%;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@font-face {
+  font-family: Vietnam;
+  font-weight: 600;
+  src: url("../assets/fonts/BeVietnamPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  /* font-weight: 600; */
+  src: url("../assets/fonts/RobotoMono-VariableFont_wght.ttf");
 }

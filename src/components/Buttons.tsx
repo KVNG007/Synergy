@@ -10,11 +10,11 @@ type Props = {
 
 export const ArrowButton:React.FC<Props> = ({ type, className, children, arrowColor}) => {
     return(
-        <button className={` ${className} bg-grey text-gray-700 rounded-xl flex flex-row items-center justify-center gap-4`}>
+        <button className={` ${className} font-Roboto font-semibold text-gray-500 rounded-xl flex flex-row items-center justify-center gap-4`}>
             {children}
             {
                 type == 'right'?
-                <FaChevronRight color={arrowColor || '#949494'} size={10} /> : ''
+                <FaChevronRight color={arrowColor || '#949494'} size={12} /> : ''
             }
         </button>
     )
