@@ -2,7 +2,7 @@ import { ArrowButton } from '@/components/Buttons'
 import Navbar from '@/components/Navbar'
 import React from 'react'
 import { ParticlesPro } from '../../components/ParticlesPro'
-import { Logo, LogoBlack, LogoOrange, SupportIcon } from '@/components/Icons'
+import { FlexibleIcon, Logo, LogoBlack, LogoOrange, SecurityIcon, StableIcon, SupportIcon } from '@/components/Icons'
 import Bg from "../../../public/assets/cyborg-hand.png"
 import { FaChevronRight } from 'react-icons/fa'
 import Footer from '@/components/Footer'
@@ -187,7 +187,7 @@ t
                 <p className='font-Vietnam-medium leading-[1.28em] text-5xl text-center'>What advantages <br/>do we have?</p>
               </div>
 
-              <div className="relative z-[39] w-full h-full translate-y-[-40%] flex flex-col gap-8">
+              <div className="relative z-[39] w-full h-full translate-y-[-35%] flex flex-col gap-8">
 
                 <div className="w-full px-[12.5%] flex flex-row items-center justify-between h-[80dvh]">
                   <section className="w-[250px] h-max p-4 py-8 flex flex-col gap-4  place-self-start bg-mild_orange rounded-xl">
@@ -205,13 +205,13 @@ t
 
                   <section className="w-[250px] h-max p-4 py-8 flex flex-col gap-4  place-self-end bg-mild_orange rounded-xl">
                     <aside className='flex flex-col gap-6'>
-                      <SupportIcon />
-                      <h2 className="font-Vietnam-medium text-xl text-black">Custom<br/>Support</h2>
+                      <FlexibleIcon />
+                      <h2 className="font-Vietnam-medium text-xl text-black">Flexible<br/>Solutions</h2>
                     </aside>
 
                     <aside className="border-t border-black py-4">
                       <p className="font-Roboto text-sm">
-                        You receive personalized support tailored to your unique needs, with prompt assistance and solutions designed specifically for your requests.
+                        Choose from various access tiers to manage your validators and subnets according to your specific needs and staking volumes.
                       </p>
                     </aside>
                   </section>
@@ -220,26 +220,26 @@ t
                 <div className="w-full px-[12.5%] flex flex-row items-center justify-between h-[80dvh]">
                   <section className="w-[250px] h-max p-4 py-8 flex flex-col gap-4  place-self-start bg-mild_orange rounded-xl">
                     <aside className='flex flex-col gap-6'>
-                      <SupportIcon />
-                      <h2 className="font-Vietnam-medium text-xl text-black">Custom<br/>Support</h2>
+                      <SecurityIcon />
+                      <h2 className="font-Vietnam-medium text-xl text-black">Robust<br/>Security</h2>
                     </aside>
 
                     <aside className="border-t border-black py-4">
                       <p className="font-Roboto text-sm">
-                        You receive personalized support tailored to your unique needs, with prompt assistance and solutions designed specifically for your requests.
+                        Rely on continuous monitoring and system optimization from our experienced team, ensuring 24/7 protection.
                       </p>
                     </aside>
                   </section>
 
                   <section className="w-[250px] h-max p-4 py-8 flex flex-col gap-4  place-self-end bg-mild_orange rounded-xl">
                     <aside className='flex flex-col gap-6'>
-                      <SupportIcon />
-                      <h2 className="font-Vietnam-medium text-xl text-black">Custom<br/>Support</h2>
+                      <StableIcon />
+                      <h2 className="font-Vietnam-semibold text-xl text-black">Stable<br/>Infrastructure</h2>
                     </aside>
 
                     <aside className="border-t border-black py-4">
                       <p className="font-Roboto text-sm">
-                        You receive personalized support tailored to your unique needs, with prompt assistance and solutions designed specifically for your requests.
+                        Experience efficient, fast, and accurate data processing across all your subnets with our high-performance hardware.
                       </p>
                     </aside>
                   </section>
