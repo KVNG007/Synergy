@@ -79,9 +79,7 @@ body {
   border-radius: 3em !important;
 }
 
-.cybord-bg {
-  background-position: 80% 80%;
-}
+
 
 @layer utilities {
   .text-balance {
@@ -100,3 +98,4 @@ body {
   /* font-weight: 600; */
   src: url("../assets/fonts/RobotoMono-VariableFont_wght.ttf");
 }
+
