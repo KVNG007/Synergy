@@ -104,7 +104,7 @@ const Navbar = () => {
           <span>Delegate</span>
         </ArrowButton>
 
-        <button className='flex flex-col items-end w-[40px] p-2 aspect-square bg-accent justify-between gap-1 rounded-lg cursor-pointer' 
+        <button className='flex md:hidden flex-col items-end w-[40px] p-2 aspect-square bg-accent justify-between gap-1 rounded-lg cursor-pointer' 
           onClick={()=> setShowNav(prev => !prev)}
         >
           <span className="w-full h-[2.5px] bg-white"></span>

@@ -1,14 +1,25 @@
+"use client"
+
 import { ArrowButton } from '@/components/Buttons'
 import Navbar from '@/components/Navbar'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ParticlesPro } from '../../components/ParticlesPro'
 import { FlexibleIcon, Logo, LogoBlack, LogoOrange, SecurityIcon, StableIcon, SupportIcon } from '@/components/Icons'
 import Bg from "../../../public/assets/cyborg-hand.png"
 import { FaChevronRight } from 'react-icons/fa'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
+import { useGetStatsQuery } from '@/features/stats/apiStats'
 
 const page = () => {
+  
+  const { data, isFetching, isLoading, error } = useGetStatsQuery({}, { refetchOnMountOrArgChange: true });
+  
+  useEffect(() => {
+    console.log(data?.rates);
+  }, [data])
+  
+
     return (
         <main className='bg-gray-100 min-h-screen  text-black pt-4 '>
           <header className='w-full px-4'>
@@ -17,7 +28,7 @@ const page = () => {
             <section className='mt-[100px] h-max md:h-[70dvh] xl:h-[calc(100dvh-140px)] flex flex-col md:flex-row gap-4'>
               <div className="flex flex-col w-full md:w-[33%] h-full gap-4 ">
                 <div className="w-full h-full bg-white px-8 py-12 text-left flex flex-col items-start  justify-between gap-6 md:gap-[unset] rounded-xl">
-                  <h2 className=' text-[1.8rem] md:text-[2.75rem] leading-8 md:leading-[2.75rem] font-Vietnam tracking-tighter'>
+                  <h2 className=' text-[1.8rem] md:text-[2em] xl:text-[2.75rem] leading-8 md:leading-[2.75rem] font-Vietnam tracking-tighter'>
                     Exploring Synergies.<br/> Bridging <span className='text-accent'>AI</span> and the <span className='text-accent'>Real World</span>
                   </h2>
 
@@ -50,7 +61,7 @@ const page = () => {
               <h2 className='text-accent font-Vietnam-semibold font-semibold leading-6 text-sm xl:text-lg'>Total<br/> Stake:</h2>
               <div className="flex flex-col text-right gap-1 font-Roboto font-semibold text-base xl:text-lg ">
                 <p>396838.17</p>
-                <p className='text-gray-400'>≈$109053923.73</p>
+                <p className='text-gray-400'>≈${data?.rates?.BTC || '...'}</p>
               </div>
             </div>
 
@@ -58,7 +69,7 @@ const page = () => {
               <h2 className='text-accent font-Vietnam-semibold font-semibold leading-6 text-sm xl:text-lg'>Daily<br/>Reward</h2>
               <div className="flex flex-col text-right gap-1 font-Roboto font-semibold text-base xl:text-lg ">
                 <p>396838.17</p>
-                <p className='text-gray-400'>≈$109053923.73</p>
+                <p className='text-gray-400'>≈${data?.rates?.ETH || '...'}</p>
               </div>
             </div>
 
@@ -66,7 +77,7 @@ const page = () => {
               <h2 className='text-accent font-Vietnam-semibold font-semibold leading-6 text-sm xl:text-lg'>Daily Validator<br/> Reward</h2>
               <div className="flex flex-col text-right gap-1 font-Roboto font-semibold text-base xl:text-lg ">
                 <p>396838.17</p>
-                <p className='text-gray-400'>≈$109053923.73</p>
+                <p className='text-gray-400'>≈${data?.rates?.SOL || '...'}</p>
               </div>
             </div>
 
