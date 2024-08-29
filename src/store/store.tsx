@@ -1,17 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from "@reduxjs/toolkit/query"
 
-import { apiAuth } from '../features/auth/apiAuth';
+
 import { apiStats } from '../features/stats/apiStats'
 
 export const store = configureStore({
     reducer: {
-        [apiAuth.reducerPath]: apiAuth.reducer,
         [apiStats.reducerPath]: apiStats.reducer,
     },
     middleware: (getDefaultMiddleware) => 
         getDefaultMiddleware().concat([
-            apiAuth.middleware,
             apiStats.middleware,
         ]
     ),
